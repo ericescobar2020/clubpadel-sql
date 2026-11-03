@@ -1,3 +1,6 @@
+-- Calcula la cantidad de reservas y los lugares libres por clase.
+-- LEFT JOIN permite incluir clases sin reservas; COUNT(r.IdReserva) cuenta sus reservas.
+
 USE ClubPadel;
 
 SELECT COUNT(*) AS TotalReservas
