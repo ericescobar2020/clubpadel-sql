@@ -41,3 +41,12 @@ ON c.IdClase = r.IdClase
 GROUP BY c.IdClase, c.Nombre ,c.Cupo 
 HAVING c.Cupo - COUNT(r.IdReserva) >=6
 ORDER BY c.IdClase ASC;
+
+SELECT c.IdClase, c.Nombre AS Nombre,   
+COUNT (r.IdReserva) AS CantidadReservas
+FROM Clase as c 
+LEFT JOIN Reserva as r
+ON c.Idclase = r.IdClase
+GROUP BY c.Idclase,c.Nombre
+HAVING COUNT (r.IdReserva) >= 2
+ORDER BY c.IdClase ASC;
