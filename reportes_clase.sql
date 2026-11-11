@@ -13,3 +13,4 @@ GROUP BY c.Idclase,c.Nombre
 HAVING COUNT (r.IdReserva) >= 2
 ORDER BY c.IdClase ASC;
 --MOTRAR 
+-- Actualizado desde GitHub para practicar git pull.
